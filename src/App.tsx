@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Rectangle from './components/rectangle';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <svg>
+        <foreignObject width={90} height={40} x={10} y={40}>
+          <div className='content' onClick={() => { alert(1) }}>
+            1
+          </div>
+        </foreignObject>
+        <foreignObject width={90} height={40} x={190} y={10}>
+          <div className='content' onClick={() => { alert(1) }}>
+            10
+          </div>
+        </foreignObject>
+        <foreignObject width={90} height={40} x={190} y={70}>
+          <div className='content' onClick={() => { alert(1) }}>
+            11
+          </div>
+        </foreignObject>
+        <path d="M 100 60 L 200 30" stroke="black" fill="none"/>
+        <path d="M 100 60 C 140, 30, 140, 30, 200 30" stroke="black" fill="none"/>
+      </svg>
+
     </div>
   );
 }
